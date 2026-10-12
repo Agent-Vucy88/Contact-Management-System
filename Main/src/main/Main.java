@@ -4,10 +4,12 @@
  */
 package main;
 
+
 /**
  *
  * @author USER
  */
+ 
 public class Main {
 
     /**
@@ -15,6 +17,7 @@ public class Main {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-    }
-    
-}
+    FileHandler filehandler = new FileHandler();
+    filehandler.createFile();
+
+    }}
