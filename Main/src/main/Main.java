@@ -9,7 +9,7 @@ package main;
  *
  * @author USER
  */
- 
+ import java.util.Scanner;
 public class Main {
 
     /**
@@ -17,7 +17,16 @@ public class Main {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-    FileHandler filehandler = new FileHandler();
-    filehandler.createFile();
-
+        Scanner sc = new Scanner(System.in);
+    FileHandler fileHandler = new FileHandler();
+    fileHandler.createFile();
+   
+    
+    System.out.println("Name");
+    String name = sc.nextLine();
+     System.out.println("Phone number");
+    String phoneNumber = sc.nextLine();
+     System.out.println("Email");
+    String email = sc.nextLine();
+     fileHandler.writeFile(name, phoneNumber, email);
     }}

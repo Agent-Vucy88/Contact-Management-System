@@ -11,6 +11,8 @@ package main;
  */
 import java.io.File;
 import java.io.IOException;
+import java.io.FileWriter;
+import java.util.Formatter;
 public class FileHandler {  
     public void createFile(){
     try{
@@ -20,10 +22,23 @@ System.out.println("File created");
 }
         else{
 System.out.println("File already exists");}
-System.out.println("Location:"+file.getAbsolutePath());
+
   }
  
  catch(IOException e){
 System.out.println("Error");
 }
-}}
+}
+public void writeFile(String name,String phoneNumber,String email){
+
+try(Formatter formatter = new Formatter(new FileWriter("Contacts.csv"))){
+formatter.format("%-20s%-15s%-30s%n" ,name ,phoneNumber ,email);
+
+}
+catch(IOException e){
+
+System.out.println("Error:" + e.getMessage());
+}
+}
+
+}
