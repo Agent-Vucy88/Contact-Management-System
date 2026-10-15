@@ -5,10 +5,6 @@
 package main;
 
 
-/**
- *
- * @author USER
- */
  
 public class Main {
 
